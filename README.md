@@ -1,7 +1,7 @@
 # ToDoApplication
 
-ASP.NET core + razor view 
-Asp.NET core as server side api
+ASP.NET core + razor view.
+Asp.NET core as server side api.
 In Memory collection as database.
 
 The application supports:
