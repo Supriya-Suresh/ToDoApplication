@@ -1,0 +1,50 @@
+﻿
+@model List<ToDoApplication.Models.Tasks>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Tasks List</h2>
+        </div>
+        <div class="col-6" style="text-align:right">
+            <a asp-controller="Tasks" asp-action="AddTask" class="btn btn-primary">Create a new Task</a>
+        </div>
+    </div>
+    <br />
+     @if (Model.Count() > 0)
+    {
+
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var task in Model)
+                {
+                    <tr>
+                        <td width="25%">@task.Name</td>
+                        <td width="25%">@task.Priority</td>
+                        <td width="25%">@task.Status</td>
+                        <td width="10%" class="text-center">
+                            <a asp-controller="Tasks" asp-action="UpdateTask" asp-route-id="@task.Id" class="btn btn-primary" mx-1>Edit</a>
+                        </td> 
+                    </tr>   
+                }
+
+            </tbody>
+        </table>
+     }
+    else
+    {
+        <p>No items yet</p>
+    }
+</div>
+
