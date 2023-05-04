@@ -8,7 +8,7 @@ The application supports:
 
 1.	Display the list existing tasks
 2.	Add and Edit tasks
-3.	Automatically delets the completed tasks and does not show up in the lists of tasks
+3.	Automatically delete's the completed tasks and does not show up in the lists of tasks
 
 Validation:
 
